@@ -27,9 +27,9 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *  1 reaches inside the lexical scope for count while 2 reaches outside to the global scope
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * 2 as count was referred from inside a scope but pulled in from the global scope
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
 */
@@ -56,11 +56,13 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
+function inning(games){
+  let score = 0
+  return score += Math.round(Math.random() * 3) 
+    
 
 }
+console.log(inning(2));
 
 /* Task 3: finalScore()
 
@@ -76,11 +78,18 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
-
-  /*Code Here*/
+function finalScore(cb, inningAmount){
+Home: function (){
+  return cb + inningAmount
+}
+Away: function (){
+  return cb + inningAmount
 
 }
+  
+
+};
+console.log(finalScore(inning(),2)
 
 /* Task 4: 
 
@@ -104,8 +113,7 @@ and returns the score at each pont in the game, like so:
 
 Final Score: awayTeam - homeTeam */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(cb1, cb2, inningNum) {
+
+
 }
-
-
